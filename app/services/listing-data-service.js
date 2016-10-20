@@ -44,20 +44,26 @@ angular.module('services', [])
 		];
 
 		var listingList = [];
-		for( var i = 0; i < listingMap.length; i++) {
+		for(var i = 0; i < listingMap.length; i++) {
 			var temp = {};
-			var photos = [];
+			var photoList = [];
+			
 			var key = listingMap[i].listingKey
+
 			for( var j = 0; j < photoUrlMap.length; j++) {
 				if (photoUrlMap[j].key == key) {
-					photos.push(photoUrlMap[i].photo_url);
+					var photoMap = {};
+					photoMap["photo_url"] = photoUrlMap[j].photo_url;
+					photoMap["photo_desc"] = photoUrlMap[j].photo_desc;
+					photoMap["key"] = key;
+					photoList.push(photoMap);
 				}
 			}
+	
 			temp["key"] = key;
-			temp["photo_desc"] = photoUrlMap[i].photo_desc;
 			temp["listPrice"] = listingMap[i].listPrice
 			temp["listingID"] = listingMap[i].listingID
-			temp["photos"] = photos;
+			temp["photos"] = photoList;
 			listingList.push(temp);
 		}
 
