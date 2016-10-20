@@ -2,7 +2,6 @@
 
 // Declare app level module which depends on views, and components
 (function(angular) {
-
 	var app = angular.module('myApp', ['controllers', 'services']);
 	// var service = angular.module('ProcessListingDataService');
 	// .config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
