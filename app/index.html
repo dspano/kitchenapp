@@ -14,21 +14,27 @@
     <link rel="stylesheet" href="app.css">
     <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
   </head>
-  <body>
-    <ul class="menu">
-      <li><a href="#!/view1">view1</a></li>
-      <li><a href="#!/view2">view2</a></li>
-    </ul>
-
+  <body style="background: white;">
+    <iframe width="0" height="0" src="https://www.youtube.com/embed/qeMFqkcPYcg?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
     <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div ng-view></div>
 
-    <div>Angular seed app: v<span app-version></span></div>
-    <div ng-controller="KitchenController">
-      <p ng-repeat="listing in listings">{{listings}}</p>
+    <h1 style="text-align: center;"><font color="red">Dreaming of a White Kitchen!</font></h1>
+    <div style="text-align: center"ng-controller="KitchenController">
+      <div ng-repeat="listing in listings">
+        
+        <div ng-repeat="photo in listing.photos">
+          <a href="{{listing.rdcLink}}">
+            <img src="{{photo.photo}}" height="250" width="350">
+          </a>
+          <p>
+            <b>Address: </b>{{listing.address}} </br>
+            <b>Recognition Description:</b> {{photo.recognitionDesc}}
+          </p>
+        </div>
+      </div>
     </div>
 
     <!-- In production use:

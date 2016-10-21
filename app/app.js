@@ -4,17 +4,11 @@
 (function(angular) {
 	var app = angular.module('myApp', ['controllers', 'services']);
 	// var service = angular.module('ProcessListingDataService');
-	// .config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
+	// app.config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
 	//   $locationProvider.hashPrefix('!');
 
 	//   $routeProvider.otherwise({redirectTo: '/view1'});
-	// }])
-	// .service('ProcessListingDataService', [function() {
-	// 	return {
-	// 		name: "Listing Name",
-	// 		id: "Listing ID"
-	// 	};
-	// }])
+	// }]);
 
 
 	var listingMap = [
