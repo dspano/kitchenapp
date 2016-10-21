@@ -16,8 +16,6 @@ angular.module('services')
 				data: (dataForm),
 				headers : {'Content-Type': 'application/x-www-form-urlencoded'}
 			}).then(function(response) {
-				console.log("success!");
-				console.log(response.data.token);
 				return response.data;
 		  });
 		};
@@ -30,8 +28,6 @@ angular.module('services')
 				method: 'GET',
 				url:url
 			}).then(function(response) {
-				console.log("success!");
-				console.log(response);
 				return response.data;
 			});
 		};
